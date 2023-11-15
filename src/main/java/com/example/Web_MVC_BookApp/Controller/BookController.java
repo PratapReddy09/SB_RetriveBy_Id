@@ -27,4 +27,21 @@ public class BookController {
 			}
 		return "index";
 	}
+	//both codes are same 
+	/*    
+	 *
+	 * @GetMapping("/book")
+	public ModelAndView getBookById(@RequestParam("id") Integer id) {
+		ModelAndView mv=new ModelAndView();
+		
+		Optional<Book> findById=repo.findById(id);//
+		if(findById.isPresent()) {
+			Book bookObj=findById.get();//
+			mv.addObject("book", bookObj);//
+			}
+		mv.setViewName("index");
+		return mv;
+	}
+*/
+	
 }
